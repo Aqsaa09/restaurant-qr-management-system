@@ -1,0 +1,209 @@
+/* ==========================================================================
+   AURA & EMBERS — LUXURY HAUTE CUISINE DESIGN SYSTEM
+   ========================================================================== */
+
+:root {
+  /* Color Palette - Dark Obsidian Canvas */
+  --bg-primary: #0a0c10;
+  --bg-secondary: #12151e;
+  --bg-tertiary: #181d2a;
+  
+  /* Frosted Glass & Surface Tints */
+  --bg-card: rgba(20, 25, 36, 0.78);
+  --bg-card-hover: rgba(26, 33, 48, 0.9);
+  --bg-glass: rgba(18, 22, 33, 0.72);
+  --bg-input: rgba(12, 15, 22, 0.85);
+  
+  /* Champagne Gold & Amber Accents */
+  --gold-primary: #d4af37;
+  --gold-light: #f5d99b;
+  --gold-dark: #b89025;
+  --gold-muted: rgba(212, 175, 55, 0.15);
+  --gold-gradient: linear-gradient(135deg, #f7dfa5 0%, #d4af37 50%, #ad8522 100%);
+  --gold-gradient-subtle: linear-gradient(135deg, rgba(245, 217, 155, 0.12) 0%, rgba(212, 175, 55, 0.05) 100%);
+  
+  /* Text Contrasts */
+  --text-primary: #fbf9f5;
+  --text-secondary: #d1cbc1;
+  --text-muted: #8d877d;
+  --text-gold: #e5c07b;
+  
+  /* Culinary Indicators */
+  --veg-color: #2ecc71;
+  --veg-bg: rgba(46, 204, 113, 0.12);
+  --nonveg-color: #e74c3c;
+  --nonveg-bg: rgba(231, 76, 60, 0.12);
+  --badge-gold-bg: rgba(212, 175, 55, 0.15);
+  
+  /* Hairline Borders */
+  --border-subtle: rgba(255, 255, 255, 0.07);
+  --border-gold: rgba(212, 175, 55, 0.22);
+  --border-gold-hover: rgba(212, 175, 55, 0.55);
+  --border-glass: 1px solid rgba(255, 255, 255, 0.08);
+  
+  /* High-end Shadows */
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-card: 0 12px 36px -8px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  --shadow-gold-glow: 0 0 25px rgba(212, 175, 55, 0.22), 0 10px 30px rgba(0, 0, 0, 0.5);
+  --shadow-hover: 0 20px 45px -10px rgba(0, 0, 0, 0.8), 0 0 30px rgba(212, 175, 55, 0.25);
+  
+  /* Typography */
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+  
+  /* Fluid Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-bounce: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Base Resets */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  background-image: 
+    radial-gradient(circle at 15% 15%, rgba(212, 175, 55, 0.05) 0%, transparent 45%),
+    radial-gradient(circle at 85% 85%, rgba(184, 144, 37, 0.04) 0%, transparent 45%),
+    radial-gradient(circle at 50% 50%, rgba(15, 20, 30, 0.8) 0%, var(--bg-primary) 100%);
+  background-attachment: fixed;
+  color: var(--text-primary);
+  min-height: 100vh;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Custom Luxury Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.25);
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.5);
+}
+
+/* Typography Defaults */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+
+p, span, a, button, input, textarea, select {
+  font-family: var(--font-sans);
+}
+
+a {
+  color: var(--gold-light);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: #fff;
+}
+
+/* Global Keyframe Animations */
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes goldPulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.45);
+  }
+}
+
+@keyframes shimmerEffect {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes badgeFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+/* Utility Classes */
+.gold-text {
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.glass-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition-smooth);
+}
+
+.glass-card:hover {
+  border-color: var(--border-gold-hover);
+  box-shadow: var(--shadow-hover);
+}

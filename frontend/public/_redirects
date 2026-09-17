@@ -1,0 +1,16 @@
+# Netlify redirects for SPA routing
+/api/* https://res-qr-2.onrender.com/api/:splat 200
+/table/* /index.html 200
+/qr/* /index.html 200
+/admin/* /index.html 200
+/menu/* /index.html 200
+/cart/* /index.html 200
+/checkout/* /index.html 200
+/order-status/* /index.html 200
+/bill/* /index.html 200
+/contact/* /index.html 200
+/feedback/* /index.html 200
+/game/* /index.html 200
+/games/* /index.html 200
+/billing/* /index.html 200
+/* /index.html 200

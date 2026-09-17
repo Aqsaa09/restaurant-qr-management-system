@@ -1,0 +1,189 @@
+/* BillPage.css - Luxury Haute Cuisine Digital Receipt */
+
+.bill-page {
+  padding: 30px 20px 100px;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: var(--font-sans);
+  background: transparent;
+  color: var(--text-primary);
+  animation: fadeIn 0.4s ease-out;
+}
+
+.bill-container {
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card), 0 0 40px rgba(212, 175, 55, 0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+.bill-header {
+  background: radial-gradient(circle at 50% 0%, rgba(38, 48, 70, 0.8) 0%, rgba(14, 18, 26, 0.98) 100%);
+  border-bottom: 1px solid var(--border-gold);
+  color: var(--text-primary);
+  padding: 36px 24px;
+  text-align: center;
+}
+
+.bill-header h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4.5vw, 2.8rem);
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+}
+
+.bill-header p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.restaurant-info {
+  margin-top: 14px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+}
+
+.bill-details {
+  padding: 24px 32px;
+  border-bottom: 1px solid var(--border-subtle);
+  background: rgba(12, 15, 23, 0.5);
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.detail-row strong {
+  color: var(--text-primary);
+}
+
+/* Bill Items Table */
+.bill-items {
+  padding: 28px 32px;
+}
+
+.items-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.items-table th {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  color: var(--gold-light);
+  text-align: left;
+  padding: 12px 8px;
+  border-bottom: 1px solid var(--border-gold);
+}
+
+.items-table td {
+  padding: 14px 8px;
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.items-table td.item-price,
+.items-table td.item-total {
+  text-align: right;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.items-table th.price-col,
+.items-table th.total-col {
+  text-align: right;
+}
+
+/* Summary Breakdown */
+.bill-summary {
+  padding: 24px 32px;
+  background: rgba(12, 15, 23, 0.6);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.grand-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0 8px;
+  margin-top: 12px;
+  border-top: 2px solid var(--border-gold);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.grand-total .amount {
+  font-family: var(--font-sans);
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--gold-light);
+}
+
+/* QR Code & Payment Section */
+.payment-section {
+  padding: 28px 32px;
+  text-align: center;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.qr-container {
+  display: inline-block;
+  background: white;
+  padding: 16px;
+  border-radius: var(--radius-md);
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.2);
+  margin: 16px 0;
+}
+
+.upi-id {
+  font-family: monospace;
+  font-size: 1rem;
+  color: var(--gold-light);
+  background: rgba(10, 13, 20, 0.8);
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  display: inline-block;
+  margin: 10px 0;
+  border: 1px solid var(--border-gold);
+}
+
+/* Bill Actions */
+.bill-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+.bill-actions .btn {
+  padding: 14px 28px;
+}
+
+@media (max-width: 600px) {
+  .bill-details, .bill-items, .bill-summary, .payment-section {
+    padding: 18px 16px;
+  }
+}

@@ -1,0 +1,291 @@
+/* OrderStatusPage.css - Luxury Haute Cuisine Order Tracker */
+
+.order-status-page {
+  padding: 30px 20px 100px;
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: var(--font-sans);
+  background: transparent;
+  color: var(--text-primary);
+  animation: fadeIn 0.4s ease-out;
+}
+
+/* Header */
+.status-header {
+  text-align: center;
+  margin-bottom: 24px;
+  padding: 28px 20px;
+  background: radial-gradient(circle at 50% 0%, rgba(35, 45, 65, 0.6) 0%, rgba(14, 18, 26, 0.95) 100%);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+
+.status-header h1 {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.status-header p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* Status Card */
+.status-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  text-align: center;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-card);
+  position: relative;
+  overflow: hidden;
+}
+
+.status-icon {
+  font-size: 3.5rem;
+  margin-bottom: 16px;
+  display: inline-block;
+  filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.3));
+  animation: badgeFloat 3s ease-in-out infinite;
+}
+
+.status-card h2 {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+.status-card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+/* Circular Timer */
+.time-remaining {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 10px;
+}
+
+.time-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, rgba(10, 13, 20, 0.9) 70%);
+  border: 2px solid var(--gold-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.25);
+  animation: goldPulse 3s infinite ease-in-out;
+}
+
+.time-number {
+  font-family: var(--font-sans);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--gold-light);
+  line-height: 1;
+}
+
+.time-unit {
+  font-size: 0.72rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+/* Progress Tracker */
+.progress-tracker {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin: 36px 0 20px;
+  padding: 0 10px;
+}
+
+.progress-tracker::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  right: 30px;
+  height: 2px;
+  background: var(--border-subtle);
+  z-index: 1;
+}
+
+.progress-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  gap: 8px;
+  flex: 1;
+}
+
+.step-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(14, 18, 26, 0.9);
+  border: 2px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: var(--text-muted);
+  transition: all var(--transition-smooth);
+}
+
+.progress-step.completed .step-icon {
+  border-color: #2ecc71;
+  background: rgba(46, 204, 113, 0.15);
+  color: #2ecc71;
+  box-shadow: 0 0 12px rgba(46, 204, 113, 0.4);
+}
+
+.progress-step.active .step-icon {
+  border-color: var(--gold-primary);
+  background: var(--gold-gradient);
+  color: #0b0d12;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+  transform: scale(1.1);
+}
+
+.step-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.progress-step.completed .step-label {
+  color: var(--text-secondary);
+}
+
+.progress-step.active .step-label {
+  color: var(--gold-light);
+  font-weight: 700;
+}
+
+/* Order Details Card */
+.order-details-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-card);
+}
+
+.order-details-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+}
+
+.item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+}
+
+.item-row:last-child {
+  border-bottom: none;
+}
+
+.order-total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  margin-top: 8px;
+  border-top: 1px solid var(--border-gold);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.order-total-row .total-amount {
+  font-size: 1.4rem;
+  color: var(--gold-light);
+}
+
+/* Action Buttons */
+.status-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.status-actions .btn {
+  width: 100%;
+  padding: 15px;
+}
+
+/* Game Popup Modal */
+.game-popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+  animation: fadeIn 0.3s ease;
+}
+
+.game-popup-modal {
+  background: var(--bg-card);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  max-width: 440px;
+  width: 100%;
+  text-align: center;
+  box-shadow: var(--shadow-hover);
+  animation: fadeSlideUp 0.3s ease;
+}
+
+.game-popup-modal h3 {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.game-popup-modal p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}

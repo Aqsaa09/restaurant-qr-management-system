@@ -1,0 +1,111 @@
+/* WorkflowGuidePage.css - Luxury Haute Cuisine Dining Guide */
+
+.workflow-guide {
+  padding: 30px 20px 100px;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: var(--font-sans);
+  color: var(--text-primary);
+  animation: fadeIn 0.4s ease-out;
+}
+
+.guide-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 36px 24px;
+  background: radial-gradient(circle at 50% 0%, rgba(38, 48, 70, 0.6) 0%, rgba(14, 18, 26, 0.95) 100%);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+
+.guide-header h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4.5vw, 2.8rem);
+  font-weight: 700;
+  margin-bottom: 10px;
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.guide-header p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.workflow-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.workflow-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition-smooth);
+}
+
+.workflow-step:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-gold);
+  box-shadow: var(--shadow-hover);
+}
+
+.step-number {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--gold-gradient);
+  color: #0b0d12;
+  font-family: var(--font-sans);
+  font-size: 1.3rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+.step-content {
+  flex: 1;
+}
+
+.step-content h3 {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+.step-content p {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.guide-actions {
+  text-align: center;
+}
+
+.guide-actions .btn {
+  padding: 16px 36px;
+  font-size: 1.05rem;
+}
+
+@media (max-width: 600px) {
+  .workflow-step {
+    flex-direction: column;
+    gap: 14px;
+    padding: 20px;
+  }
+}

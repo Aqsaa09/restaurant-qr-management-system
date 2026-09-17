@@ -1,0 +1,70 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  position: relative;
+}
+
+.main-content {
+  flex: 1;
+  padding-bottom: 80px;
+}
+
+/* Toast overrides for luxury aesthetic */
+.toaster-luxury {
+  border-radius: var(--radius-md) !important;
+  background: rgba(22, 28, 40, 0.95) !important;
+  backdrop-filter: blur(16px) !important;
+  border: 1px solid var(--border-gold) !important;
+  color: var(--text-primary) !important;
+  box-shadow: var(--shadow-gold-glow) !important;
+  font-family: var(--font-sans) !important;
+}
+
+/* Global Button Styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all var(--transition-smooth);
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--gold-gradient);
+  color: #0b0d12;
+  box-shadow: 0 4px 18px rgba(212, 175, 55, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.45);
+  color: #000;
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+  border: 1px solid var(--border-subtle);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--border-gold);
+  color: var(--gold-light);
+  transform: translateY(-2px);
+}

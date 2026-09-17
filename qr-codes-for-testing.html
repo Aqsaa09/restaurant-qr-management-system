@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant QR Codes - Phone Testing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .header {
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        .qr-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .qr-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .qr-code {
+            width: 200px;
+            height: 200px;
+            margin: 10px auto;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+        }
+        .table-info {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .url-link {
+            word-break: break-all;
+            background: #e9ecef;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 12px;
+            margin: 10px 0;
+        }
+        .instructions {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .test-btn {
+            background: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+            text-decoration: none;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🍽️ Restaurant QR Codes</h1>
+        <p>Scan these QR codes with your phone to test the restaurant ordering system</p>
+    </div>
+
+    <div class="instructions">
+        <h3>📱 How to Test:</h3>
+        <ol>
+            <li><strong>Open your phone camera</strong> or QR scanner app</li>
+            <li><strong>Point at any QR code below</strong></li>
+            <li><strong>Tap the notification</strong> to open the restaurant menu</li>
+            <li><strong>Browse menu, add items, place orders!</strong></li>
+        </ol>
+        <p><strong>Note:</strong> Make sure you're connected to the internet. The system will load the live restaurant menu and ordering system.</p>
+    </div>
+
+    <div class="qr-grid">
+        <div class="qr-card">
+            <h2>Table T01</h2>
+            <img class="qr-code" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://restaurantqr-seven.vercel.app/%23/table/57c637e4-2fb5-45df-88d3-2350c7e45693" alt="Table T01 QR Code">
+            <div class="table-info">
+                <p><strong>Capacity:</strong> 2 people</p>
+                <p><strong>Location:</strong> Window Side</p>
+            </div>
+            <div class="url-link">https://restaurantqr-seven.vercel.app/#/table/57c637e4-2fb5-45df-88d3-2350c7e45693</div>
+            <a href="https://restaurantqr-seven.vercel.app/#/table/57c637e4-2fb5-45df-88d3-2350c7e45693" class="test-btn" target="_blank">🔗 Test Link</a>
+            <br>
+            <a href="https://restaurantqr-seven.vercel.app/table/57c637e4-2fb5-45df-88d3-2350c7e45693" class="test-btn" target="_blank" style="background: #007bff;">🔗 Direct Link</a>
+        </div>
+
+        <div class="qr-card">
+            <h2>Table T02</h2>
+            <img class="qr-code" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://restaurantqr-seven.vercel.app/table/46082504-abc5-4002-b3c6-db26f65f1acf" alt="Table T02 QR Code">
+            <div class="table-info">
+                <p><strong>Capacity:</strong> 4 people</p>
+                <p><strong>Location:</strong> Center</p>
+            </div>
+            <div class="url-link">https://restaurantqr-seven.vercel.app/table/46082504-abc5-4002-b3c6-db26f65f1acf</div>
+            <a href="https://restaurantqr-seven.vercel.app/table/46082504-abc5-4002-b3c6-db26f65f1acf" class="test-btn" target="_blank">🔗 Test Link</a>
+        </div>
+
+        <div class="qr-card">
+            <h2>Table T03</h2>
+            <img class="qr-code" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://restaurantqr-seven.vercel.app/table/d2bbdc5c-0286-4e7a-893c-46f91811d6ab" alt="Table T03 QR Code">
+            <div class="table-info">
+                <p><strong>Capacity:</strong> 2 people</p>
+                <p><strong>Location:</strong> Corner</p>
+            </div>
+            <div class="url-link">https://restaurantqr-seven.vercel.app/table/d2bbdc5c-0286-4e7a-893c-46f91811d6ab</div>
+            <a href="https://restaurantqr-seven.vercel.app/table/d2bbdc5c-0286-4e7a-893c-46f91811d6ab" class="test-btn" target="_blank">🔗 Test Link</a>
+        </div>
+
+        <div class="qr-card">
+            <h2>Table T04</h2>
+            <img class="qr-code" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://restaurantqr-seven.vercel.app/table/c142166b-5176-4ed9-85e2-465b0b2afe9a" alt="Table T04 QR Code">
+            <div class="table-info">
+                <p><strong>Capacity:</strong> 6 people</p>
+                <p><strong>Location:</strong> Family Section</p>
+            </div>
+            <div class="url-link">https://restaurantqr-seven.vercel.app/table/c142166b-5176-4ed9-85e2-465b0b2afe9a</div>
+            <a href="https://restaurantqr-seven.vercel.app/table/c142166b-5176-4ed9-85e2-465b0b2afe9a" class="test-btn" target="_blank">🔗 Test Link</a>
+        </div>
+
+        <div class="qr-card">
+            <h2>Table T05</h2>
+            <img class="qr-code" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://restaurantqr-seven.vercel.app/table/942241c9-8470-48c7-846f-ae69a2ee7a3a" alt="Table T05 QR Code">
+            <div class="table-info">
+                <p><strong>Capacity:</strong> 4 people</p>
+                <p><strong>Location:</strong> Garden View</p>
+            </div>
+            <div class="url-link">https://restaurantqr-seven.vercel.app/table/942241c9-8470-48c7-846f-ae69a2ee7a3a</div>
+            <a href="https://restaurantqr-seven.vercel.app/table/942241c9-8470-48c7-846f-ae69a2ee7a3a" class="test-btn" target="_blank">🔗 Test Link</a>
+        </div>
+
+        <div class="qr-card">
+            <h2>Table T06</h2>
+            <img class="qr-code" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://restaurantqr-seven.vercel.app/table/495e6688-2127-4ffb-a4b4-059a67dbf3a3" alt="Table T06 QR Code">
+            <div class="table-info">
+                <p><strong>Capacity:</strong> 2 people</p>
+                <p><strong>Location:</strong> Balcony</p>
+            </div>
+            <div class="url-link">https://restaurantqr-seven.vercel.app/table/495e6688-2127-4ffb-a4b4-059a67dbf3a3</div>
+            <a href="https://restaurantqr-seven.vercel.app/table/495e6688-2127-4ffb-a4b4-059a67dbf3a3" class="test-btn" target="_blank">🔗 Test Link</a>
+        </div>
+    </div>
+
+    <div style="margin-top: 30px; padding: 20px; background: #fff3cd; border-radius: 8px;">
+        <h3>🔧 Admin Panel Access:</h3>
+        <p><strong>URL:</strong> <a href="https://restaurantqr-seven.vercel.app/admin/login" target="_blank">https://restaurantqr-seven.vercel.app/admin/login</a></p>
+        <p><strong>Email:</strong> admin@restaurant.com</p>
+        <p><strong>Password:</strong> admin123</p>
+    </div>
+
+    <div style="margin-top: 20px; padding: 20px; background: #f8f9fa; border-radius: 8px; text-align: center;">
+        <p><strong>🚀 System Status:</strong> ✅ Backend Connected | ✅ Database Active | ✅ QR Codes Ready</p>
+        <p><em>Last Updated: November 4, 2025</em></p>
+    </div>
+</body>
+</html>
